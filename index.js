@@ -13,7 +13,7 @@ const listUsers = async () => {
 //Grab all the lists of tent options plan
 //PATH `https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID}`)
   
-const databaseID = process.env.NOTION_DATABASE_ID;
+const databaseId = process.env.NOTION_DATABASE_ID;
 
 const retrieveCampingList =  async () => {
     const allCampLists = await notion.databases.query({
@@ -21,7 +21,15 @@ const retrieveCampingList =  async () => {
     }) 
     console.log(allCampLists)
 };
- retrieveCampingList()
 
- 
-const getTentInfo = 
+
+const getTentInfo = async () => {
+    const payload = {
+        path: `databases/${databaseId}/query`,
+        method: 'POST'
+    }
+    const {results} = await notion.request(payload);
+    
+    
+
+getTentInfo()
