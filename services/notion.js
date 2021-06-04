@@ -22,8 +22,8 @@ const retrieveCampingList =  async () => {
     console.log(allCampLists)
 };
 
-
-const getTentInfo = async () => {
+//Export this getTentInfo function
+module.exports = async function() {
     const payload = {
         path: `databases/${databaseId}/query`,
         method: 'POST'
