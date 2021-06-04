@@ -30,6 +30,14 @@ const getTentInfo = async () => {
     }
     const {results} = await notion.request(payload);
     
-    
+    //Option 1 - using forEach
+    const options = results.forEach(result => {
+        const tentPrice = result.properties.Price.number
+        const tentWeight = result.properties['Weight (lbs)'].number
+        const tentRetailer =(result.properties.Retailer.rich_text[0].plain_text)
+        const tentName = result.properties['Tent Name'].title[0].plain_text;
+        console.log(`${tentName} is ${tentWeight} and costs ${tentPrice} at ${tentRetailer}`)
+    })
+}
 
 getTentInfo()
