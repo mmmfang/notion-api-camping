@@ -1,2 +1,1 @@
-
-getTentInfo()
+const getTents = require('./services/notion')
