@@ -3,10 +3,11 @@ const getTents = require('./services/notion.js')
 const express = require('express')
 const PORT = process.env.PORT || 3000
 
-
-
 //initialize server
 const app = express()
+
+//create static folder for frontend
+app.use(express.static('public'))
 
 app.get('/tents', async (req, res) => {
     const tents = await getTents();
