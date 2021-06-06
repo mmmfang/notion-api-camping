@@ -15,7 +15,10 @@ const addToDom = async() => {
        div.className = 'tent'
        div.innerHTML = `
        <h3>${item.tentName}</h3>
-       <p> Tent is ${item.tentWeight} lbs and sold at ${item.tentRetailer} for $${item.tentPrice}.</p>
+       <ul> 
+        <li>Weight: ${item.tentWeight} lbs</li>
+        <li> Sold at ${item.tentRetailer} for $${item.tentPrice}.</li>
+        </ul>
        `
        tentsList.appendChild(div)
 

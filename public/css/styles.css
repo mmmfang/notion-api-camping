@@ -5,13 +5,16 @@ body {
 h1{
     font-size:3rem;
     text-align:center;
+    font-weight:400;
+    color:#480b0b;
 }
 h3 {
     font-size:1.5rem;
+    text-align:center;
 }
 #tents {
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
 }
 .tent {
     background-color:#ffac3c;
@@ -19,4 +22,10 @@ h3 {
     margin:1em;
     color:#214625;
     padding: 1em;
+}
+.tent:hover {
+    border:10px solid #ffac3c;
+}
+ul {
+    list-style-type:none;
 }
