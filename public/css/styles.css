@@ -1,0 +1,22 @@
+body {
+    background-color:#4dad59f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-size:3rem;
+    text-align:center;
+}
+h3 {
+    font-size:1.5rem;
+}
+#tents {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.tent {
+    background-color:#ffac3c;
+    border:10px solid #ffcb85;
+    margin:1em;
+    color:#214625;
+    padding: 1em;
+}
